@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="azi.js"></script>
+</head>
+<body>
+    <label>Value1</label>
+    <input type="text" id="userinput1" value="0">
+    <label>Value2</label>
+    <input type="text" id="userinput2" value="0">
+    <br>
+    <button type="button" onclick="Sum()">Sum </button> <br>
+<button type="button" onclick="div()">Div </button> <br>
+<button type="button" onclick="multiple()">Multiple </button> <br>
+<button type="button" onclick="absolute()">Absolute </button>
+<br>
+<label>Result</label>
+<input type="text" disabled id="resultv" style="margin-top:1cm;" value="0">
+<p id="resultv"> </p>
+<br>
+    <script>
+        function Sum() {
+            var x = parseInt(document.getElementById("userinput1").value);
+            var  y = parseInt(document.getElementById("userinput2").value);
+            var result=x+y;
+        //document.write('The sum of ' + x + ' and ' + y + ' is: ' + z);
+        document.getElementById("resultv").value=result;
+        document.getElementById("resultv").innerHTML=result;
+        }
+        function div()
+        { var x = parseInt(document.getElementById("userinput1").value);
+        var  y = parseInt(document.getElementById("userinput2").value); 
+            var result=x%y; 
+            //document.write('The div of ' + x + ' and ' + y + ' is: ' + z);}
+            document.getElementById("resultv").value=result;
+            document.getElementById("resultv").innerHTML=result;
+        }
+        function multiple()
+        { var x = parseInt(document.getElementById("userinput1").value);
+        var  y = parseInt(document.getElementById("userinput2").value); 
+            var result=x*y; 
+           // document.write('The multiple of ' + x + ' and ' + y + ' is: ' + z);}
+           document.getElementById("resultv").value=result;
+           document.getElementById("resultv").innerHTML=result;
+        }
+        function absolute() {
+            var x = parseInt(document.getElementById("userinput1").value);
+            var  y = parseInt(document.getElementById("userinput2").value);
+            var result=x-y;
+            if(result<0) result=-result;
+            //document.write('The absolute of ' + x + ' and ' + y + ' is: ' + z); 
+            document.getElementById("resultv").value=result;
+            document.getElementById("resultv").innerHTML=result;
+        }
+    </script>
+    
+
+</body>
+</html>

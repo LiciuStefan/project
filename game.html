@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><b>Guess the number!</b></h1>
+    <label>Enter the number</label>
+    <input type="text" id="userinput1" value="0">
+    <script>
+        var y=Math.floor(Math.random()*100)
+        function guess() {
+            var x = parseInt(document.getElementById("userinput1").value)
+            if (x<y) window.alert("Enter a bigger number")
+            else if(x>y) window.alert("Enter a smaller number")
+            else window.alert("You got the right number")
+        }
+    </script>
+    <button type="button" onclick="guess()">Enter </button> 
+</body>
+</html>
